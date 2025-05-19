@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Successful</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      animation: fadeIn 1s ease-in;
+      text-align: center;
+    }
+    .success-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 40px;
+      width: 90%;
+      max-width: 360px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      animation: popIn 0.8s ease;
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      color: #bbb;
+    }
+    .info {
+      font-size: 12px;
+      color: #888;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="success-box">
+    <h2>Login Successful</h2>
+    <p>You are now connected to the internet.<br>Enjoy your browsing!</p>
+    <div class="info">You will be redirected shortly...</div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "http://$(link-redirect)";
+    }, 5000);
+  </script>
+</body>
+</html>
